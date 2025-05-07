@@ -1,6 +1,4 @@
-Copyright © 2025 Mr.salim
-All rights reserved.
-This template is licensed under [license type].
+Copyright © 2025 Mr.salim / All rights reserved
 Unauthorized distribution or modification is strictly prohibited.
 
 
