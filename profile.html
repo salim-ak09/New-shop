@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ModernShop - Profile</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="light-theme">
+    <!-- Theme Toggle -->
+    <div class="theme-toggle">
+        <button id="theme-toggle-btn">
+            <i class="fas fa-sun"></i>
+            <i class="fas fa-moon"></i>
+        </button>
+    </div>
+    <!-- Sliding Cart -->
+    <div class="sliding-cart">
+        <div class="sliding-cart-content">
+            <div class="sliding-cart-header">
+                <h2>Your Cart</h2>
+                <button class="close-cart-btn"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="sliding-cart-items">
+                <!-- Cart items will be loaded dynamically -->
+                <div class="empty-cart-message">
+                    <i class="fas fa-shopping-cart"></i>
+                    <p>Your cart is empty</p>
+                </div>
+            </div>
+            <div class="sliding-cart-footer">
+                <div class="cart-subtotal">
+                    <span>Subtotal:</span>
+                    <span class="subtotal-amount">$0.00</span>
+                </div>
+                <div class="cart-buttons">
+                    <a href="cart.html" class="btn outline">View Cart</a>
+                    <a href="checkout.html" class="btn">Checkout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Desktop Navbar -->
+    <header class="desktop-nav">
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+        
+        <div class="brand">
+            <h1>newShop</h1>
+        </div>
+        
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+        
+        <div class="user-actions">
+            <a href="profile.html" class="active"><i class="fas fa-user"></i></a>
+            <a href="liked.html" class="wishlist-icon"><i class="fas fa-heart"></i><span class="count">0</span></a>
+            <a href="#" class="cart-icon"><i class="fas fa-shopping-cart"></i><span class="count">0</span></a>
+        </div>
+    </header>
+
+    <!-- Mobile Bottom Nav -->
+    <nav class="mobile-nav">
+        <a href="index.html" class="active"><i class="fas fa-home"></i></a>
+        <a href="shop.html"><i class="fas fa-shopping-bag"></i></a>
+        <a href="liked.html" class="wishlist-icon"><i class="fas fa-heart"></i><span class="count">0</span></a>
+        <a href="#" class="cart-icon"><i class="fas fa-shopping-cart"></i><span class="count">0</span></a>
+        <a href="#" id="menu-toggle"><i class="fas fa-bars"></i></a>
+    </nav>
+
+    <!-- Mobile Side Nav -->
+    <div class="side-nav">
+        <div class="side-nav-content">
+            <div class="close-btn">
+                <i class="fas fa-times"></i>
+            </div>
+            <div class="brand">
+                <h2>newShop</h2>
+            </div>
+            <ul class="side-nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="profile.html" class="active">Profile</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+            <div class="side-nav-social">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Overlay -->
+    <div class="overlay"></div>
+
+    <!-- Main Content -->
+    <main class="profile-page">
+        <div class="profile-container">
+            <div class="profile-sidebar">
+                <div class="profile-avatar">
+                    <div class="avatar-container">
+                        <img src="https://via.placeholder.com/150x150?text=User" alt="User Avatar">
+                        <div class="avatar-edit">
+                            <i class="fas fa-camera"></i>
+                        </div>
+                    </div>
+                    <h2>John Doe</h2>
+                    <p>Member since Jan 2023</p>
+                </div>
+                <div class="profile-nav">
+                    <a href="#" class="profile-nav-item active" data-tab="dashboard">
+                        <i class="fas fa-tachometer-alt"></i> Dashboard
+                    </a>
+                    <a href="#" class="profile-nav-item" data-tab="orders">
+                        <i class="fas fa-shopping-bag"></i> Orders
+                    </a>
+                    <a href="#" class="profile-nav-item" data-tab="wishlist">
+                        <i class="fas fa-heart"></i> Wishlist
+                    </a>
+                    <a href="#" class="profile-nav-item" data-tab="settings">
+                        <i class="fas fa-cog"></i> Settings
+                    </a>
+                    <a href="#" class="profile-nav-item" data-tab="address">
+                        <i class="fas fa-map-marker-alt"></i> Addresses
+                    </a>
+                    <a href="#" class="profile-nav-item logout">
+                        <i class="fas fa-sign-out-alt"></i> Logout
+                    </a>
+                </div>
+            </div>
+            <div class="profile-content">
+                <div class="profile-tab active" id="dashboard">
+                    <h2>Dashboard</h2>
+                    <div class="dashboard-stats">
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-shopping-bag"></i>
+                            </div>
+                            <div class="stat-info">
+                                <h3>5</h3>
+                                <p>Total Orders</p>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <div class="stat-info">
+                                <h3>12</h3>
+                                <p>Wishlist Items</p>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-truck"></i>
+                            </div>
+                            <div class="stat-info">
+                                <h3>2</h3>
+                                <p>Pending Deliveries</p>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-tag"></i>
+                            </div>
+                            <div class="stat-info">
+                                <h3>3</h3>
+                                <p>Available Coupons</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="recent-orders">
+                        <h3>Recent Orders</h3>
+                        <div class="order-list">
+                            <div class="order-item">
+                                <div class="order-info">
+                                    <span class="order-id">#ORD12345</span>
+                                    <span class="order-date">May 15, 2023</span>
+                                </div>
+                                <div class="order-status">
+                                    <span class="status delivered">Delivered</span>
+                                </div>
+                                <div class="order-total">
+                                    <span>$249.99</span>
+                                </div>
+                                <div class="order-action">
+                                    <a href="#">View Details</a>
+                                </div>
+                            </div>
+                            <div class="order-item">
+                                <div class="order-info">
+                                    <span class="order-id">#ORD12346</span>
+                                    <span class="order-date">May 10, 2023</span>
+                                </div>
+                                <div class="order-status">
+                                    <span class="status shipped">Shipped</span>
+                                </div>
+                                <div class="order-total">
+                                    <span>$149.99</span>
+                                </div>
+                                <div class="order-action">
+                                    <a href="#">View Details</a>
+                                </div>
+                            </div>
+                            <div class="order-item">
+                                <div class="order-info">
+                                    <span class="order-id">#ORD12347</span>
+                                    <span class="order-date">May 5, 2023</span>
+                                </div>
+                                <div class="order-status">
+                                    <span class="status processing">Processing</span>
+                                </div>
+                                <div class="order-total">
+                                    <span>$99.99</span>
+                                </div>
+                                <div class="order-action">
+                                    <a href="#">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#" class="view-all-btn" data-tab="orders">View All Orders</a>
+                    </div>
+                </div>
+                <div class="profile-tab" id="orders">
+                    <h2>My Orders</h2>
+                    <div class="orders-filter">
+                        <div class="search-orders">
+                            <input type="text" placeholder="Search orders...">
+                            <button><i class="fas fa-search"></i></button>
+                        </div>
+                        <div class="filter-orders">
+                            <select>
+                                <option value="all">All Orders</option>
+                                <option value="processing">Processing</option>
+                                <option value="shipped">Shipped</option>
+                                <option value="delivered">Delivered</option>
+                                <option value="cancelled">Cancelled</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="orders-list">
+                        <div class="order-item">
+                            <div class="order-info">
+                                <span class="order-id">#ORD12345</span>
+                                <span class="order-date">May 15, 2023</span>
+                            </div>
+                            <div class="order-status">
+                                <span class="status delivered">Delivered</span>
+                            </div>
+                            <div class="order-total">
+                                <span>$249.99</span>
+                            </div>
+                            <div class="order-action">
+                                <a href="#">View Details</a>
+                            </div>
+                        </div>
+                        <div class="order-item">
+                            <div class="order-info">
+                                <span class="order-id">#ORD12346</span>
+                                <span class="order-date">May 10, 2023</span>
+                            </div>
+                            <div class="order-status">
+                                <span class="status shipped">Shipped</span>
+                            </div>
+                            <div class="order-total">
+                                <span>$149.99</span>
+                            </div>
+                            <div class="order-action">
+                                <a href="#">View Details</a>
+                            </div>
+                        </div>
+                        <div class="order-item">
+                            <div class="order-info">
+                                <span class="order-id">#ORD12347</span>
+                                <span class="order-date">May 5, 2023</span>
+                            </div>
+                            <div class="order-status">
+                                <span class="status processing">Processing</span>
+                            </div>
+                            <div class="order-total">
+                                <span>$99.99</span>
+                            </div>
+                            <div class="order-action">
+                                <a href="#">View Details</a>
+                            </div>
+                        </div>
+                        <div class="order-item">
+                            <div class="order-info">
+                                <span class="order-id">#ORD12348</span>
+                                <span class="order-date">April 28, 2023</span>
+                            </div>
+                            <div class="order-status">
+                                <span class="status delivered">Delivered</span>
+                            </div>
+                            <div class="order-total">
+                                <span>$199.99</span>
+                            </div>
+                            <div class="order-action">
+                                <a href="#">View Details</a>
+                            </div>
+                        </div>
+                        <div class="order-item">
+                            <div class="order-info">
+                                <span class="order-id">#ORD12349</span>
+                                <span class="order-date">April 20, 2023</span>
+                            </div>
+                            <div class="order-status">
+                                <span class="status cancelled">Cancelled</span>
+                            </div>
+                            <div class="order-total">
+                                <span>$79.99</span>
+                            </div>
+                            <div class="order-action">
+                                <a href="#">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pagination-controls">
+                        <button class="pagination-btn" disabled><i class="fas fa-chevron-left"></i></button>
+                        <span class="pagination-page active">1</span>
+                        <span class="pagination-page">2</span>
+                        <span class="pagination-page">3</span>
+                        <button class="pagination-btn"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </div>
+                <div class="profile-tab" id="wishlist">
+                    <h2>My Wishlist</h2>
+                    <div class="wishlist-grid">
+                        <!-- Wishlist items will be loaded dynamically -->
+                    </div>
+                </div>
+                <div class="profile-tab" id="settings">
+                    <h2>Account Settings</h2>
+                    <div class="settings-form">
+                        <div class="form-section">
+                            <h3>Personal Information</h3>
+                            <div class="form-group">
+                                <label for="first-name">First Name</label>
+                                <input type="text" id="first-name" value="John">
+                            </div>
+                            <div class="form-group">
+                                <label for="last-name">Last Name</label>
+                                <input type="text" id="last-name" value="Doe">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" value="john.doe@example.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone</label>
+                                <input type="tel" id="phone" value="+1 234 567 890">
+                            </div>
+                            <button class="btn">Save Changes</button>
+                        </div>
+                        <div class="form-section">
+                            <h3>Change Password</h3>
+                            <div class="form-group">
+                                <label for="current-password">Current Password</label>
+                                <input type="password" id="current-password">
+                            </div>
+                            <div class="form-group">
+                                <label for="new-password">New Password</label>
+                                <input type="password" id="new-password">
+                            </div>
+                            <div class="form-group">
+                                <label for="confirm-password">Confirm New Password</label>
+                                <input type="password" id="confirm-password">
+                            </div>
+                            <button class="btn">Update Password</button>
+                        </div>
+                        <div class="form-section">
+                            <h3>Notification Preferences</h3>
+                            <div class="form-group checkbox">
+                                <input type="checkbox" id="email-notifications" checked>
+                                <label for="email-notifications">Email Notifications</label>
+                            </div>
+                            <div class="form-group checkbox">
+                                <input type="checkbox" id="sms-notifications">
+                                <label for="sms-notifications">SMS Notifications</label>
+                            </div>
+                            <div class="form-group checkbox">
+                                <input type="checkbox" id="promo-notifications" checked>
+                                <label for="promo-notifications">Promotional Emails</label>
+                            </div>
+                            <button class="btn">Save Preferences</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="profile-tab" id="address">
+                    <h2>My Addresses</h2>
+                    <div class="address-list">
+                        <div class="address-card">
+                            <div class="address-header">
+                                <h3>Home</h3>
+                                <span class="default-badge">Default</span>
+                            </div>
+                            <div class="address-content">
+                                <p>John Doe</p>
+                                <p>123 Main Street</p>
+                                <p>Apt 4B</p>
+                                <p>New York, NY 10001</p>
+                                <p>United States</p>
+                                <p>Phone: +1 234 567 890</p>
+                            </div>
+                            <div class="address-actions">
+                                <button class="btn outline">Edit</button>
+                                <button class="btn outline delete">Delete</button>
+                            </div>
+                        </div>
+                        <div class="address-card">
+                            <div class="address-header">
+                                <h3>Office</h3>
+                            </div>
+                            <div class="address-content">
+                                <p>John Doe</p>
+                                <p>456 Business Ave</p>
+                                <p>Suite 789</p>
+                                <p>New York, NY 10002</p>
+                                <p>United States</p>
+                                <p>Phone: +1 234 567 891</p>
+                            </div>
+                            <div class="address-actions">
+                                <button class="btn outline">Edit</button>
+                                <button class="btn outline delete">Delete</button>
+                                <button class="btn outline">Set as Default</button>
+                            </div>
+                        </div>
+                        <div class="address-card add-new">
+                            <div class="add-address">
+                                <i class="fas fa-plus"></i>
+                                <p>Add New Address</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>ModernShop</h3>
+                <p>Your one-stop destination for modern and stylish products.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Email: info@modernshop.com</p>
+                <p>Phone: +1 234 567 890</p>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 ModernShop. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/profile.js"></script>
+</body>
+</html>

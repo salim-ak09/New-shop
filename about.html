@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ModernShop - About Us</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="light-theme">
+    <!-- Theme Toggle -->
+    <div class="theme-toggle">
+        <button id="theme-toggle-btn">
+            <i class="fas fa-sun"></i>
+            <i class="fas fa-moon"></i>
+        </button>
+    </div>
+    <!-- Sliding Cart -->
+    <div class="sliding-cart">
+        <div class="sliding-cart-content">
+            <div class="sliding-cart-header">
+                <h2>Your Cart</h2>
+                <button class="close-cart-btn"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="sliding-cart-items">
+                <!-- Cart items will be loaded dynamically -->
+                <div class="empty-cart-message">
+                    <i class="fas fa-shopping-cart"></i>
+                    <p>Your cart is empty</p>
+                </div>
+            </div>
+            <div class="sliding-cart-footer">
+                <div class="cart-subtotal">
+                    <span>Subtotal:</span>
+                    <span class="subtotal-amount">$0.00</span>
+                </div>
+                <div class="cart-buttons">
+                    <a href="cart.html" class="btn outline">View Cart</a>
+                    <a href="checkout.html" class="btn">Checkout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Desktop Navbar -->
+    <header class="desktop-nav">
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+        
+        <div class="brand">
+            <h1>newShop</h1>
+        </div>
+        
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="about.html" class="active">About</a></li>
+            </ul>
+        </nav>
+        
+        <div class="user-actions">
+            <a href="profile.html"><i class="fas fa-user"></i></a>
+            <a href="liked.html" class="wishlist-icon"><i class="fas fa-heart"></i><span class="count">0</span></a>
+            <a href="#" class="cart-icon"><i class="fas fa-shopping-cart"></i><span class="count">0</span></a>
+        </div>
+    </header>
+
+    <!-- Mobile Bottom Nav -->
+    <nav class="mobile-nav">
+        <a href="index.html" class="active"><i class="fas fa-home"></i></a>
+        <a href="shop.html"><i class="fas fa-shopping-bag"></i></a>
+        <a href="liked.html" class="wishlist-icon"><i class="fas fa-heart"></i><span class="count">0</span></a>
+        <a href="#" class="cart-icon"><i class="fas fa-shopping-cart"></i><span class="count">0</span></a>
+        <a href="#" id="menu-toggle"><i class="fas fa-bars"></i></a>
+    </nav>
+
+    <!-- Mobile Side Nav -->
+    <div class="side-nav">
+        <div class="side-nav-content">
+            <div class="close-btn">
+                <i class="fas fa-times"></i>
+            </div>
+            <div class="brand">
+                <h2>newShop</h2>
+            </div>
+            <ul class="side-nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="about.html" class="active">About</a></li>
+            </ul>
+            <div class="side-nav-social">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Overlay -->
+    <div class="overlay"></div>
+
+    <!-- Main Content -->
+    <main class="about-page">
+        <!-- Hero Section -->
+        <section class="about-hero">
+            <div class="about-hero-content">
+                <h1>About ModernShop</h1>
+                <p>Discover our story, mission, and the team behind your favorite online store.</p>
+            </div>
+            <div class="about-hero-image">
+                <div class="sphere-container">
+                    <div class="sphere"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Story -->
+        <section class="about-section">
+            <div class="about-image">
+                <img src="https://via.placeholder.com/600x400?text=Our+Story" alt="Our Story">
+            </div>
+            <div class="about-content">
+                <h2>Our Story</h2>
+                <p>ModernShop was founded in 2020 with a simple mission: to provide high-quality, stylish products at affordable prices. What started as a small online store has grown into a thriving e-commerce platform serving customers worldwide.</p>
+                <p>Our journey began when our founder, Jane Smith, noticed a gap in the market for modern, well-designed products that didn't break the bank. With a background in design and a passion for customer service, Jane set out to create an online shopping experience that was both enjoyable and accessible.</p>
+                <p>Today, ModernShop offers thousands of products across multiple categories, all carefully curated to meet our high standards for quality, design, and value.</p>
+            </div>
+        </section>
+
+        <!-- Our Mission -->
+        <section class="about-section reverse">
+            <div class="about-content">
+                <h2>Our Mission</h2>
+                <p>At ModernShop, our mission is to revolutionize the online shopping experience by offering carefully curated products that combine style, functionality, and affordability.</p>
+                <p>We believe that everyone deserves access to well-designed products that enhance their daily lives. That's why we work directly with manufacturers and designers to bring you exclusive items at competitive prices.</p>
+                <p>Our commitment to sustainability also drives our business decisions. We're constantly working to reduce our environmental footprint by using eco-friendly packaging and partnering with suppliers who share our values.</p>
+            </div>
+            <div class="about-image">
+                <img src="https://via.placeholder.com/600x400?text=Our+Mission" alt="Our Mission">
+            </div>
+        </section>
+
+        <!-- Our Values -->
+        <section class="about-section">
+            <div class="about-image">
+                <img src="https://via.placeholder.com/600x400?text=Our+Values" alt="Our Values">
+            </div>
+            <div class="about-content">
+                <h2>Our Values</h2>
+                <div class="values-grid">
+                    <div class="value-item">
+                        <div class="value-icon">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h3>Quality</h3>
+                        <p>We never compromise on quality. Every product in our catalog undergoes rigorous testing to ensure it meets our high standards.</p>
+                    </div>
+                    <div class="value-item">
+                        <div class="value-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <h3>Customer First</h3>
+                        <p>Our customers are at the heart of everything we do. We're committed to providing exceptional service and support.</p>
+                    </div>
+                    <div class="value-item">
+                        <div class="value-icon">
+                            <i class="fas fa-leaf"></i>
+                        </div>
+                        <h3>Sustainability</h3>
+                        <p>We're dedicated to reducing our environmental impact and promoting sustainable practices throughout our business.</p>
+                    </div>
+                    <div class="value-item">
+                        <div class="value-icon">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <h3>Innovation</h3>
+                        <p>We constantly seek new ways to improve our products and services, embracing innovation at every opportunity.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Meet Our Team -->
+        <section class="team-section">
+            <h2>Meet Our Team</h2>
+            <p class="team-intro">The talented individuals who make ModernShop possible.</p>
+            <div class="team-grid">
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="https://via.placeholder.com/300x300?text=Jane" alt="Jane Smith">
+                    </div>
+                    <h3>Jane Smith</h3>
+                    <p class="member-title">Founder & CEO</p>
+                    <p class="member-bio">With over 15 years of experience in retail and design, Jane leads our company with passion and vision.</p>
+                    <div class="member-social">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="https://via.placeholder.com/300x300?text=John" alt="John Doe">
+                    </div>
+                    <h3>John Doe</h3>
+                    <p class="member-title">Chief Product Officer</p>
+                    <p class="member-bio">John oversees our product selection and quality control, ensuring only the best items make it to our store.</p>
+                    <div class="member-social">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="https://via.placeholder.com/300x300?text=Sarah" alt="Sarah Johnson">
+                    </div>
+                    <h3>Sarah Johnson</h3>
+                    <p class="member-title">Head of Customer Experience</p>
+                    <p class="member-bio">Sarah ensures that every customer interaction with ModernShop is smooth, enjoyable, and memorable.</p>
+                    <div class="member-social">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="https://via.placeholder.com/300x300?text=Michael" alt="Michael Chen">
+                    </div>
+                    <h3>Michael Chen</h3>
+                    <p class="member-title">Tech Lead</p>
+                    <p class="member-bio">Michael leads our development team, constantly improving our website and technology infrastructure.</p>
+                    <div class="member-social">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="testimonials-section">
+            <h2>What Our Customers Say</h2>
+            <div class="testimonials-slider">
+                <div class="testimonial-item">
+                    <div class="testimonial-content">
+                        <p>"ModernShop has completely transformed my shopping experience. The quality of their products is exceptional, and their customer service is top-notch!"</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="https://via.placeholder.com/80x80?text=A" alt="Alex P.">
+                        <div>
+                            <h4>Alex P.</h4>
+                            <p>Loyal Customer</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-item">
+                    <div class="testimonial-content">
+                        <p>"I've been shopping with ModernShop for over a year now, and I'm consistently impressed by their selection and prices. Highly recommend!"</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="https://via.placeholder.com/80x80?text=M" alt="Maria L.">
+                        <div>
+                            <h4>Maria L.</h4>
+                            <p>Verified Buyer</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-item">
+                    <div class="testimonial-content">
+                        <p>"The attention to detail in every product I've purchased from ModernShop is remarkable. They've earned a customer for life!"</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="https://via.placeholder.com/80x80?text=D" alt="David K.">
+                        <div>
+                            <h4>David K.</h4>
+                            <p>Repeat Customer</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-controls">
+                <button class="testimonial-btn prev"><i class="fas fa-chevron-left"></i></button>
+                <div class="testimonial-dots">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+                <button class="testimonial-btn next"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact-section">
+            <h2>Get In Touch</h2>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h3>Our Location</h3>
+                            <p>123 Modern Street, Suite 456</p>
+                            <p>New York, NY 10001</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3>Email Us</h3>
+                            <p>info@modernshop.com</p>
+                            <p>support@modernshop.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <div>
+                            <h3>Call Us</h3>
+                            <p>+1 (234) 567-8900</p>
+                            <p>Mon-Fri, 9am-6pm EST</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-comments"></i>
+                        <div>
+                            <h3>Live Chat</h3>
+                            <p>Available 24/7</p>
+                            <button class="btn">Start Chat</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <h3>Send Us a Message</h3>
+                    <form>
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Your Email</label>
+                            <input type="email" id="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>ModernShop</h3>
+                <p>Your one-stop destination for modern and stylish products.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Email: info@modernshop.com</p>
+                <p>Phone: +1 234 567 890</p>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 ModernShop. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/about.js"></script>
+</body>
+</html>

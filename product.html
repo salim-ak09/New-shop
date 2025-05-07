@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ModernShop - Product Details</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="light-theme">
+    <!-- Theme Toggle -->
+    <div class="theme-toggle">
+        <button id="theme-toggle-btn">
+            <i class="fas fa-sun"></i>
+            <i class="fas fa-moon"></i>
+        </button>
+    </div>
+    <!-- Sliding Cart -->
+    <div class="sliding-cart">
+        <div class="sliding-cart-content">
+            <div class="sliding-cart-header">
+                <h2>Your Cart</h2>
+                <button class="close-cart-btn"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="sliding-cart-items">
+                <!-- Cart items will be loaded dynamically -->
+                <div class="empty-cart-message">
+                    <i class="fas fa-shopping-cart"></i>
+                    <p>Your cart is empty</p>
+                </div>
+            </div>
+            <div class="sliding-cart-footer">
+                <div class="cart-subtotal">
+                    <span>Subtotal:</span>
+                    <span class="subtotal-amount">$0.00</span>
+                </div>
+                <div class="cart-buttons">
+                    <a href="cart.html" class="btn outline">View Cart</a>
+                    <a href="checkout.html" class="btn">Checkout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Desktop Navbar -->
+    <header class="desktop-nav">
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+        
+        <div class="brand">
+            <h1>newShop</h1>
+        </div>
+        
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+        
+        <div class="user-actions">
+            <a href="profile.html"><i class="fas fa-user"></i></a>
+            <a href="liked.html" class="wishlist-icon"><i class="fas fa-heart"></i><span class="count">0</span></a>
+            <a href="#" class="cart-icon"><i class="fas fa-shopping-cart"></i><span class="count">0</span></a>
+        </div>
+    </header>
+
+    <!-- Mobile Bottom Nav -->
+    <nav class="mobile-nav">
+        <a href="index.html" class="active"><i class="fas fa-home"></i></a>
+        <a href="shop.html"><i class="fas fa-shopping-bag"></i></a>
+        <a href="liked.html" class="wishlist-icon"><i class="fas fa-heart"></i><span class="count">0</span></a>
+        <a href="#" class="cart-icon"><i class="fas fa-shopping-cart"></i><span class="count">0</span></a>
+        <a href="#" id="menu-toggle"><i class="fas fa-bars"></i></a>
+    </nav>
+
+    <!-- Mobile Side Nav -->
+    <div class="side-nav">
+        <div class="side-nav-content">
+            <div class="close-btn">
+                <i class="fas fa-times"></i>
+            </div>
+            <div class="brand">
+                <h2>newShop</h2>
+            </div>
+            <ul class="side-nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+            <div class="side-nav-social">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Overlay -->
+    <div class="overlay"></div>
+
+    <!-- Main Content -->
+    <main class="product-details-page">
+        <div class="breadcrumb">
+            <a href="index.html">Home</a> &gt;
+            <a href="shop.html">Shop</a> &gt;
+            <span id="product-category">Category</span> &gt;
+            <span id="product-name">Product Name</span>
+        </div>
+
+        <div class="product-details-container">
+            <div class="product-gallery">
+                <div class="main-image">
+                    <div class="product-3d-view">
+                        <div class="product-model">
+                            <!-- 3D model placeholder -->
+                            <div class="cube">
+                                <div class="face front"></div>
+                                <div class="face back"></div>
+                                <div class="face right"></div>
+                                <div class="face left"></div>
+                                <div class="face top"></div>
+                                <div class="face bottom"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="thumbnail-gallery">
+                    <div class="thumbnail active" data-img="1">
+                        <img src="https://via.placeholder.com/100x100?text=Image1" alt="Thumbnail 1">
+                    </div>
+                    <div class="thumbnail" data-img="2">
+                        <img src="https://via.placeholder.com/100x100?text=Image2" alt="Thumbnail 2">
+                    </div>
+                    <div class="thumbnail" data-img="3">
+                        <img src="https://via.placeholder.com/100x100?text=Image3" alt="Thumbnail 3">
+                    </div>
+                    <div class="thumbnail" data-img="4">
+                        <img src="https://via.placeholder.com/100x100?text=Image4" alt="Thumbnail 4">
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-info">
+                <h1 id="detail-product-name">Premium Product</h1>
+                <div class="product-rating">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <span class="rating-count">(120 reviews)</span>
+                </div>
+                <div class="product-price">
+                    <span class="current-price">$199.99</span>
+                    <span class="original-price">$249.99</span>
+                    <span class="discount">20% OFF</span>
+                </div>
+                <div class="product-description">
+                    <p>This premium product features high-quality materials and modern design. Perfect for those who appreciate style and functionality. The sleek design complements any setting, making it a versatile addition to your collection.</p>
+                </div>
+                <div class="product-variants">
+                    <h3>Colors</h3>
+                    <div class="color-options">
+                        <div class="color-option active" style="background-color: #000;"></div>
+                        <div class="color-option" style="background-color: #3498db;"></div>
+                        <div class="color-option" style="background-color: #e74c3c;"></div>
+                        <div class="color-option" style="background-color: #2ecc71;"></div>
+                    </div>
+                </div>
+                <div class="product-quantity">
+                    <h3>Quantity</h3>
+                    <div class="quantity-selector">
+                        <button class="quantity-btn minus"><i class="fas fa-minus"></i></button>
+                        <input type="number" value="1" min="1" max="10" id="quantity">
+                        <button class="quantity-btn plus"><i class="fas fa-plus"></i></button>
+                    </div>
+                </div>
+                <div class="product-actions">
+                    <button class="btn add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                    <button class="btn outline wishlist-btn"><i class="far fa-heart"></i> Add to Wishlist</button>
+                </div>
+                <div class="delivery-info">
+                    <div class="delivery-item">
+                        <i class="fas fa-truck"></i>
+                        <div>
+                            <h4>Free Shipping</h4>
+                            <p>On orders over $50</p>
+                        </div>
+                    </div>
+                    <div class="delivery-item">
+                        <i class="fas fa-undo"></i>
+                        <div>
+                            <h4>30 Days Return</h4>
+                            <p>If goods have problems</p>
+                        </div>
+                    </div>
+                    <div class="delivery-item">
+                        <i class="fas fa-shield-alt"></i>
+                        <div>
+                            <h4>Secure Payment</h4>
+                            <p>100% secure payment</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-tabs">
+            <div class="tabs-header">
+                <button class="tab-btn active" data-tab="description">Description</button>
+                <button class="tab-btn" data-tab="specifications">Specifications</button>
+                <button class="tab-btn" data-tab="reviews">Reviews</button>
+            </div>
+            <div class="tabs-content">
+                <div class="tab-panel active" id="description">
+                    <h3>Product Description</h3>
+                    <p>This premium product is designed with the modern consumer in mind. Featuring high-quality materials and expert craftsmanship, it offers both style and functionality. The sleek design complements any setting, making it a versatile addition to your collection.</p>
+                    <p>Key features include:</p>
+                    <ul>
+                        <li>Premium quality materials</li>
+                        <li>Modern and sleek design</li>
+                        <li>Durable construction</li>
+                        <li>Versatile functionality</li>
+                        <li>Easy to use and maintain</li>
+                    </ul>
+                    <p>Whether you're looking for a practical solution or a stylish addition to your collection, this product offers the perfect balance of form and function.</p>
+                </div>
+                <div class="tab-panel" id="specifications">
+                    <h3>Product Specifications</h3>
+                    <table class="specs-table">
+                        <tr>
+                            <td>Dimensions</td>
+                            <td>10" x 8" x 2"</td>
+                        </tr>
+                        <tr>
+                            <td>Weight</td>
+                            <td>1.5 lbs</td>
+                        </tr>
+                        <tr>
+                            <td>Materials</td>
+                            <td>Premium aluminum, high-grade plastic</td>
+                        </tr>
+                        <tr>
+                            <td>Color Options</td>
+                            <td>Black, Blue, Red, Green</td>
+                        </tr>
+                        <tr>
+                            <td>Warranty</td>
+                            <td>2 years limited warranty</td>
+                        </tr>
+                        <tr>
+                            <td>Country of Origin</td>
+                            <td>USA</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="tab-panel" id="reviews">
+                    <h3>Customer Reviews</h3>
+                    <div class="review-summary">
+                        <div class="average-rating">
+                            <span class="rating-number">4.5</span>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <span class="rating-count">Based on 120 reviews</span>
+                        </div>
+                        <div class="rating-bars">
+                            <div class="rating-bar">
+                                <span>5 stars</span>
+                                <div class="bar-container">
+                                    <div class="bar" style="width: 75%;"></div>
+                                </div>
+                                <span>75%</span>
+                            </div>
+                            <div class="rating-bar">
+                                <span>4 stars</span>
+                                <div class="bar-container">
+                                    <div class="bar" style="width: 15%;"></div>
+                                </div>
+                                <span>15%</span>
+                            </div>
+                            <div class="rating-bar">
+                                <span>3 stars</span>
+                                <div class="bar-container">
+                                    <div class="bar" style="width: 7%;"></div>
+                                </div>
+                                <span>7%</span>
+                            </div>
+                            <div class="rating-bar">
+                                <span>2 stars</span>
+                                <div class="bar-container">
+                                    <div class="bar" style="width: 2%;"></div>
+                                </div>
+                                <span>2%</span>
+                            </div>
+                            <div class="rating-bar">
+                                <span>1 star</span>
+                                <div class="bar-container">
+                                    <div class="bar" style="width: 1%;"></div>
+                                </div>
+                                <span>1%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="user-reviews">
+                        <div class="review-item">
+                            <div class="reviewer-info">
+                                <img src="https://via.placeholder.com/50x50?text=User" alt="User">
+                                <div>
+                                    <h4>John Doe</h4>
+                                    <div class="stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <span class="review-date">2 weeks ago</span>
+                                </div>
+                            </div>
+                            <p class="review-text">Absolutely love this product! The quality is exceptional and it looks even better in person. Highly recommend to anyone considering it.</p>
+                        </div>
+                        <div class="review-item">
+                            <div class="reviewer-info">
+                                <img src="https://via.placeholder.com/50x50?text=User" alt="User">
+                                <div>
+                                    <h4>Jane Smith</h4>
+                                    <div class="stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                    </div>
+                                    <span class="review-date">1 month ago</span>
+                                </div>
+                            </div>
+                            <p class="review-text">Great product overall, but I had some minor issues with delivery. The product itself is fantastic though!</p>
+                        </div>
+                        <div class="review-item">
+                            <div class="reviewer-info">
+                                <img src="https://via.placeholder.com/50x50?text=User" alt="User">
+                                <div>
+                                    <h4>Mike Johnson</h4>
+                                    <div class="stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half-alt"></i>
+                                        <i class="far fa-star"></i>
+                                    </div>
+                                    <span class="review-date">2 months ago</span>
+                                </div>
+                            </div>
+                            <p class="review-text">Good value for the price. It's not perfect but definitely worth what I paid for it.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Similar Products -->
+        <section class="similar-products">
+            <h2>Similar Products</h2>
+            <div class="products-slider">
+                <button class="slider-arrow prev"><i class="fas fa-chevron-left"></i></button>
+                <div class="products-slider-container" id="similar-products">
+                    <!-- Similar products will be loaded dynamically -->
+                </div>
+                <button class="slider-arrow next"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>ModernShop</h3>
+                <p>Your one-stop destination for modern and stylish products.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Email: info@modernshop.com</p>
+                <p>Phone: +1 234 567 890</p>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 ModernShop. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/products.js"></script>
+    <script src="js/product-details.js"></script>
+</body>
+</html>
